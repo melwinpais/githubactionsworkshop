@@ -20,3 +20,38 @@ Follow the instruction on the workshop for steps by steps detail on how to use t
 ## Final Architecture
 
 ![Architecture](/static/images/deploy-to-aws-with-github-action.png)
+
+
+GITHUB_ORG=melwinpais
+GITHUB_REPO=githubactionsworkshop
+ROLE_NAME=melpaisgithubacriosnrole
+ECR_REPO=allianz-repo
+ECS_CLUSTER_NAME=allianz-cluster
+AWS_REGION=us-east-1
+AVAILABILITY_ZONES=us-east-1a,us-east-1b,us-east-1c
+
+{
+  "OutputKey": "VPCStackName",
+  "OutputValue": "environment-bootstrap-VPCStack-1MAKL5NIIEGQW",
+  "Description": "VPC Stack Name for import"
+}
+{
+  "OutputKey": "ECRRepositoryName",
+  "OutputValue": "allianz-repo",
+  "Description": "ECR Repository Name"
+}
+{
+  "OutputKey": "RoleGithubActionsARN",
+  "OutputValue": "arn:aws:iam::109643588784:role/melpaisgithubacriosnrole",
+  "Description": "CICD Role for GitHub Actions"
+}
+{
+  "OutputKey": "AWSRegion",
+  "OutputValue": "us-east-1",
+  "Description": "AWS Region for stack deployment"
+}
+{
+  "OutputKey": "IdpGitHubOidc",
+  "OutputValue": "arn:aws:iam::109643588784:oidc-provider/token.actions.githubusercontent.com",
+  "Description": "ARN of Github OIDC Provider"
+}
