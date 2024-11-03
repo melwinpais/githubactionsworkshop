@@ -12,7 +12,7 @@ jobs:
     permissions:
       id-token: write # need this for OIDC
       contents: read
-    environment: main
+    environment: allianz-dev
     outputs:
       image-tag: ${{ steps.set-image-tag.outputs.IMAGE_TAG }} 
     steps:
